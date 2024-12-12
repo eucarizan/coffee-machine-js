@@ -5,6 +5,7 @@
   - [about](#about)
   - [stages](#stages)
     - [1: making coffee](#1-making-coffee)
+    - [2: ingredient calculator](#2-ingredient-calculator)
 
 ## learning
 this project allows you to get a taste of javascript. practice working with functions, challenge yourself with loops and conditions, and get more experience with js.
@@ -35,6 +36,49 @@ mixing boiled water with crushed coffee beans
 pouring coffee into the cup
 pouring some milk into the cup
 coffee is ready!
+```
+
+</details>
+
+### 2: ingredient calculator
+<details>
+<summary>the machine should calculate how many ingredients it needs to make the required amount of coffee.</summary>
+
+#### 2.1 description
+now let's consider a case when you need a lot of coffee. maybe you're hosting a party with a lot of guests! in these circumstances, it's better to make preparations in advance.
+
+so, we will ask a user to enter the desired amount of coffee, in cups. given this, you can adjust the program by calculating how much water, coffee, and milk are necessary to make the specified amount of coffee.
+
+of course, all this coffee is not needed right now, so at this stage, the coffee machine doesn't actually make any coffee yet.
+
+#### 2.2 objectives
+let's break the task into several steps:
+
+1. first, read the numbers of coffee drinks from the input.
+2. figure out how much of each ingredient the machine will need. note that one cup of coffee made on this coffee machine contains 200 ml of water, 50 ml of milk, and 15 g of coffee beans.
+3. output the required ingredient amounts back to the user.
+
+#### 2.3 examples
+the greater-than symbol followed by a space (`> `) represents the user input. note that it's not part of the input.
+
+**example 1**: _a dialogue with a user might look like this_
+```
+write how many cups of coffee you will need:
+> 25
+for 25 cups of coffee you will need:
+5000 ml of water
+1250 ml of milk
+375 g of coffee beans
+```
+
+**example 2**: _here is another dialogue_
+```
+write how many cups of coffee you will need:
+> 125
+for 125 cups of coffee you will need:
+25000 ml of water
+6250 ml of milk
+1875 g of coffee beans
 ```
 
 </details>
