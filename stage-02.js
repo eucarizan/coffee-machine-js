@@ -1,8 +1,19 @@
 const input = require('sync-input');
-console.log(`Starting to make a coffee
-Grinding coffee beans
-Boiling water
-Mixing boiled water with crushed coffee beans
-Pouring coffee into the cup
-Pouring some milk into the cup
-Coffee is ready!`);
+
+let water = 200;
+let milk = 50;
+let beans = 15;
+function multiply(cups) {
+  water *= cups;
+  milk *= cups;
+  beans *= cups;
+}
+
+let cups = input("Write how many cups of coffee you will need:");
+multiply(cups);
+let output = `For ${cups} cups of coffee you will need:
+${water} ml of water
+${mlik} ml of milk
+${beans} g of coffee beans`;
+
+console.log(output);
