@@ -6,6 +6,7 @@
   - [stages](#stages)
     - [1: making coffee](#1-making-coffee)
     - [2: ingredient calculator](#2-ingredient-calculator)
+    - [3: coffee for all](#3-coffee-for-all)
 
 ## learning
 this project allows you to get a taste of javascript. practice working with functions, challenge yourself with loops and conditions, and get more experience with js.
@@ -79,6 +80,113 @@ for 125 cups of coffee you will need:
 25000 ml of water
 6250 ml of milk
 1875 g of coffee beans
+```
+
+</details>
+
+### 3: coffee for all
+<details>
+<summary>program the machine to calculate how many cups it can make based on the number of set ingredients</summary>
+
+#### 3.1 description
+a real coffee machine doesn't have an infinite supply of water, milk, or coffee beans. and if you input a really big number, it's almost certain that a real coffee machine wouldn't have the supplies needed to make all that coffee for you.
+
+in this stage, you need to improve the previous program. now you will check amounts of water, milk, and coffee beans available in your coffee machine at the moment.
+
+#### 3.2 objectives
+write a program that does the following:
+
+1. it requests the amounts of water, milk, and coffee beans available at the moment, and then asks for the number of cups a user needs.
+2. if the coffee machine has enough supplies to make the specified amount of coffee, the program should print `"yes, i can make that amount of coffee"`.
+3. if the coffee machine can make more than that, the program should output `"yes, i can make that amount of coffee (and even n more than that)"`, where *n* is the number of additional cups of coffee that the coffee machine can make.
+4. if the amount of given resources is not enough to make the specified amount of coffee, the program should output `"no, i can make only n cups of coffee"`.
+
+like in the previous stage, the coffee machine needs 200 ml of water, 50 ml of milk, and 15 g of coffee beans to make one cup of coffee.
+
+#### 3.3 examples
+The greater-than symbol followed by a space (`> `) represents the user input. Note that it's not part of the input.
+
+**example 1:**
+```
+write how many ml of water the coffee machine has:
+> 300
+write how many ml of milk the coffee machine has:
+> 65
+write how many grams of coffee beans the coffee machine has:
+> 100
+write how many cups of coffee you will need:
+> 1
+yes, i can make that amount of coffee
+
+```
+
+**example 2:**
+```
+write how many ml of water the coffee machine has:
+> 500
+write how many ml of milk the coffee machine has:
+> 250
+write how many grams of coffee beans the coffee machine has:
+> 200
+write how many cups of coffee you will need:
+> 10
+no, i can make only 2 cups of coffee
+
+```
+
+**example 3:**
+```
+write how many ml of water the coffee machine has:
+> 1550
+write how many ml of milk the coffee machine has:
+> 299
+write how many grams of coffee beans the coffee machine has:
+> 300
+write how many cups of coffee you will need:
+> 3
+yes, i can make that amount of coffee (and even 2 more than that)
+
+```
+
+**example 4:**
+```
+write how many ml of water the coffee machine has:
+> 0
+write how many ml of milk the coffee machine has:
+> 0
+write how many grams of coffee beans the coffee machine has:
+> 0
+write how many cups of coffee you will need:
+> 1
+no, i can make only 0 cups of coffee
+
+```
+
+**example 5:**
+```
+write how many ml of water the coffee machine has:
+> 0
+write how many ml of milk the coffee machine has:
+> 0
+write how many grams of coffee beans the coffee machine has:
+> 0
+write how many cups of coffee you will need:
+> 0
+yes, i can make that amount of coffee 
+
+```
+
+**example 6:**
+```
+write how many ml of water the coffee machine has:
+> 200
+write how many ml of milk the coffee machine has:
+> 50
+write how many grams of coffee beans the coffee machine has:
+> 15
+write how many cups of coffee you will need:
+> 0
+yes, i can make that amount of coffee (and even 1 more than that)
 ```
 
 </details>
