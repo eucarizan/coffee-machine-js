@@ -7,6 +7,7 @@
     - [1: making coffee](#1-making-coffee)
     - [2: ingredient calculator](#2-ingredient-calculator)
     - [3: coffee for all](#3-coffee-for-all)
+    - [4: buy fill take](#4-buy-fill-take)
 
 ## learning
 this project allows you to get a taste of javascript. practice working with functions, challenge yourself with loops and conditions, and get more experience with js.
@@ -187,6 +188,111 @@ write how many grams of coffee beans the coffee machine has:
 write how many cups of coffee you will need:
 > 0
 yes, i can make that amount of coffee (and even 1 more than that)
+```
+
+</details>
+
+### 4: buy fill take
+<details>
+<summary>teach your virtual coffee machine to perform three basic actions: collect the money, replenish the supplies, and serve the coffee</summary>
+
+#### 4.1 description
+let's simulate an actual coffee machine! what do we need for that? this coffee machine will have a limited supply of water, milk, coffee beans, and disposable cups. also, it will calculate how much money it gets for selling coffee.
+
+there are several options for the coffee machine we want you to implement: first, it should sell coffee. it can make different types of coffee: espresso, latte, and cappuccino. of course, each variety requires a different amount of supplies, however, in any case, you will need only one disposable cup for a drink. second, the coffee machine must get replenished by a special worker. third, another special worker should be able to take out money from the coffee machine.
+
+#### 4.2 objectives
+write a program that offers to buy one cup of coffee or to fill the supplies or to take its money out. note that the program is supposed to do one of the mentioned actions at a time. it should also calculate the amounts of remaining ingredients and how much money is left. display the quantity of supplies before and after purchase.
+
+1. first, your program reads one option from the standard input, which can be `"buy"`, `"fill"`, `"take"`. if a user wants to buy some coffee, the input is `"buy"`. if a special worker thinks that it is time to fill out all the supplies for the coffee machine, the input line will be `"fill"`. if another special worker decides that it is time to take out the money from the coffee machine, you'll get the input `"take"`.
+2. if the user writes `"buy"` then they must choose one of three types of coffee that the coffee machine can make: espresso, latte, or cappuccino.
+  - for one espresso, the coffee machine needs _250 ml_ of water and _16 g_ of coffee beans. it costs _$4_.
+  - for a latte, the coffee machine needs _350 ml_ of water, _75 ml_ of milk, and _20 g_ of coffee beans. it costs _$7_.
+  - and for a cappuccino, the coffee machine needs _200 ml_ of water, _100 ml_ of milk, and _12 g_ of coffee beans. it costs _$6_.
+3. if the user writes `"fill"`, the program should ask them how much water, milk, coffee and how many disposable cups they want to add into the coffee machine.
+4. if the user writes `"take"` the program should give all the money that it earned from selling coffee.
+
+at the moment, the coffee machine has _$550_, _400 ml_ of water, _540 ml_ of milk, _120 g_ of coffee beans, and *9* disposable cups.
+
+to sum up, your program should print the coffee machine's state, process one query from the user, as well as print the coffee machine's state after that. try to use functions for implementing every action that the coffee machine can do.
+
+#### 4.3 examples
+an espresso should be number *1* in the list, a latte number *2*, and a cappuccino number *3*.
+options are named as `"buy"`, `"fill"`, `"take"`.
+
+the greater-than symbol followed by a space (`> `) represents the user input. note that it's not part of the input.
+
+**example 1:**
+```
+the coffee machine has:
+400 ml of water
+540 ml of milk
+120 g of coffee beans
+9 disposable cups
+$550 of money
+
+write action (buy, fill, take): 
+> buy
+what do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino: 
+> 3
+
+the coffee machine has:
+200 ml of water
+440 ml of milk
+108 g of coffee beans
+8 disposable cups
+$556 of money
+
+```
+
+**example 2:**
+```
+the coffee machine has:
+400 ml of water
+540 ml of milk
+120 g of coffee beans
+9 disposable cups
+$550 of money
+
+write action (buy, fill, take): 
+> fill
+write how many ml of water you want to add: 
+> 2000
+write how many ml of milk you want to add: 
+> 500
+write how many grams of coffee beans you want to add: 
+> 100
+write how many disposable cups you want to add: 
+> 10
+
+the coffee machine has:
+2400 ml of water
+1040 ml of milk
+220 g of coffee beans
+19 disposable cups
+$550 of money
+
+```
+
+**example 3:**
+```
+the coffee machine has:
+400 ml of water
+540 ml of milk
+120 g of coffee beans
+9 disposable cups
+$550 of money
+
+write action (buy, fill, take): 
+> take
+i gave you $550
+
+the coffee machine has:
+400 ml of water
+540 ml of milk
+120 g of coffee beans
+9 disposable cups
+$0 of money
 ```
 
 </details>
