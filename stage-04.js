@@ -5,7 +5,7 @@ let coffeeMachine = {
   milk: 540,
   beans: 120,
   cups: 9,
-  money: 500
+  money: 550
 };
 
 const espresso = { water: 250, milk: 0, beans: 16, cups: 1, money: 4 };
@@ -38,10 +38,10 @@ function makeCoffee(coffeeMachine, recipe) {
 }
 
 function fillSupplies() {
-  coffeeMachine.water += input("Write how many ml of water the coffee machine has:");
-  coffeeMachine.milk += input("Write how many ml of milk the coffee machine has:");
-  coffeeMachine.beans += input("Write how many grams of coffee beans the coffee machine has:");
-  coffeeMachine.cups += input("Write how many disposable cups you want to add:");
+  coffeeMachine.water += Number(input("Write how many ml of water the coffee machine has:"));
+  coffeeMachine.milk += Number(input("Write how many ml of milk the coffee machine has:"));
+  coffeeMachine.beans += Number(input("Write how many grams of coffee beans the coffee machine has:"));
+  coffeeMachine.cups += Number(input("Write how many disposable cups you want to add:"));
 }
 
 function takeMoney() {
