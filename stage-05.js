@@ -49,7 +49,7 @@ function canMakeCoffee(coffeeMachine, recipe) {
   if (coffeeMachine.milk < recipe.milk) return "Sorry, not enough milk!";
   if (coffeeMachine.beans < recipe.beans) return "Sorry, not enough milk!";
   if (coffeeMachine.cups < recipe.cups) return "Sorry, not enough milk!";
-  return "I have enough resources, making you a cofffee!";
+  return "I have enough resources, making you a coffee!";
 }
 
 function fillSupplies() {
