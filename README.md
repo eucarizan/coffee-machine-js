@@ -8,6 +8,7 @@
     - [2: ingredient calculator](#2-ingredient-calculator)
     - [3: coffee for all](#3-coffee-for-all)
     - [4: buy fill take](#4-buy-fill-take)
+    - [5: keep tracking of the supplies](#5-keep-tracking-of-the-supplies)
 
 ## learning
 this project allows you to get a taste of javascript. practice working with functions, challenge yourself with loops and conditions, and get more experience with js.
@@ -293,6 +294,125 @@ the coffee machine has:
 120 g of coffee beans
 9 disposable cups
 $0 of money
+```
+
+</details>
+
+### 5: keep tracking of the supplies
+<details>
+<summary>program the machine to display how many supplies it has on the screen. work on the main loop: now, the menu keeps updating until users choose to exit.</summary>
+
+#### 5.1 description
+just one action is not so interesting, is it? let's improve the program so it can do multiple actions, one after another. it should repeatedly ask a user what they want to do. if the user types `"buy"`, `"fill"` or `"take"`, then the program should do exactly the same thing it did in the previous step. however, if the user wants to switch off the coffee machine, they should type `"exit"`. the program should terminate on this command. also, when the user types `"remaining"`, the program should output all the resources that the coffee machine has. this means that you shouldn't show the remaining stock levels at the beginning/end of the program.
+
+remember, that:
+- for the espresso, the coffee machine needs 250 ml of water and 16 g of coffee beans. it costs $4.
+- for the latte, the coffee machine needs 350 ml of water, 75 ml of milk, and 20 g of coffee beans. it costs $7.
+- and for the cappuccino, the coffee machine needs 200 ml of water, 100 ml of milk, and 12 g of coffee. it costs $6.
+
+#### 5.2 objectives
+write a program that will work endlessly to make coffee for all interested people until the shutdown signal is given. introduce two new options: `"remaining"` and "exit"`.
+
+do not forget that you can be out of resources for making coffee. if the coffee machine doesn't have enough resources to make coffee, the program should output a message that says it can't make a cup of coffee and state what is missing.
+
+and the last improvement to the program at this step — if the user types `"buy"` to buy a cup of coffee and then changes his mind, they should be able to type `"back"` to return into the main cycle.
+
+#### 5.3 examples
+your coffee machine should have the same initial resources as in the example (_400 ml_ of water, _540 ml_ of milk, _120 g_ of coffee beans, _9_ disposable cups, _$550_ in cash).
+
+The greater-than symbol followed by a space (`> `) represents the user input. Note that it's not part of the input.
+
+```
+write action (buy, fill, take, remaining, exit): 
+> remaining
+
+the coffee machine has:
+400 ml of water
+540 ml of milk
+120 g of coffee beans
+9 disposable cups
+$550 of money
+
+write action (buy, fill, take, remaining, exit): 
+> buy
+
+what do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu: 
+> 2
+i have enough resources, making you a coffee!
+
+write action (buy, fill, take, remaining, exit): 
+> remaining
+
+the coffee machine has:
+50 ml of water
+465 ml of milk
+100 g of coffee beans
+8 disposable cups
+$557 of money
+
+write action (buy, fill, take, remaining, exit): 
+> buy
+
+what do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu: 
+> 2
+sorry, not enough water!
+
+write action (buy, fill, take, remaining, exit): 
+> fill
+
+write how many ml of water you want to add: 
+> 1000
+write how many ml of milk you want to add: 
+> 0
+write how many grams of coffee beans you want to add: 
+> 0
+write how many disposable cups you want to add: 
+> 0
+
+write action (buy, fill, take, remaining, exit): 
+> remaining
+
+the coffee machine has:
+1050 ml of water
+465 ml of milk
+100 g of coffee beans
+8 disposable cups
+$557 of money
+
+write action (buy, fill, take, remaining, exit): 
+> buy
+
+what do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu: 
+> 2
+i have enough resources, making you a coffee!
+
+write action (buy, fill, take, remaining, exit): 
+> remaining
+
+the coffee machine has:
+700 ml of water
+390 ml of milk
+80 g of coffee beans
+7 disposable cups
+$564 of money
+
+write action (buy, fill, take, remaining, exit): 
+> take
+
+i gave you $564
+
+write action (buy, fill, take, remaining, exit): 
+> remaining
+
+the coffee machine has:
+700 ml of water
+390 ml of milk
+80 g of coffee beans
+7 disposable cups
+$0 of money
+
+write action (buy, fill, take, remaining, exit): 
+> exit
 ```
 
 </details>
