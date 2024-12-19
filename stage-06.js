@@ -1,8 +1,4 @@
-const readline = require('readline');
-const rl = readline.createInterface({
-  input: process.stdin,
-  output:process.stdout
-});
+const input = require('sync-input');
 
 let coffeeMachine = {
   water: 400,
@@ -25,9 +21,8 @@ function displayState() {
   console.log(`$${coffeeMachine.money} of money`);
 }
 
-async function buyCoffee() {
-  const question = (query) => new Promise((resolve) => rl.question(query, resolve));
-  let coffeeType = await question("\nWhat do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:\n");
+function buyCoffee() {
+  let coffeeType = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:\n");
   
   if (coffeeType == 1) makeCoffee(coffeeMachine, espresso);
   else if (coffeeType == 2) makeCoffee(coffeeMachine, latte);
@@ -45,7 +40,7 @@ function makeCoffee(coffeeMachine, recipe) {
     coffeeMachine.beans -= recipe.beans;
     coffeeMachine.cups -= recipe.cups;
     coffeeMachine.money += recipe.money;
-  } 
+  }
   console.log(message);
 }
 
@@ -57,14 +52,11 @@ function canMakeCoffee(coffeeMachine, recipe) {
   return "I have enough resources, making you a coffee!";
 }
 
-async function fillSupplies() {
-  const question = (query) => new Promise((resolve) => rl.question(query, resolve));
-
-  coffeeMachine.water += Number(await question("\nWrite how many ml of water you want to add:"));
-  coffeeMachine.milk += Number(await question("Write how many ml of milk you want to add:"));
-  coffeeMachine.beans += Number(await question("Write how many grams of coffee beans you want to add:"));
-  coffeeMachine.cups += Number(await question("Write how many disposable cups you want to add:"));
-  
+function fillSupplies() {
+  coffeeMachine.water += Number(input("\nWrite how many ml of water the coffee machine has:"));
+  coffeeMachine.milk += Number(input("Write how many ml of milk the coffee machine has:"));
+  coffeeMachine.beans += Number(input("Write how many grams of coffee beans the coffee machine has:"));
+  coffeeMachine.cups += Number(input("Write how many disposable cups you want to add:"));
   console.log();
 }
 
@@ -73,19 +65,18 @@ function takeMoney() {
   coffeeMachine.money = 0;
 }
 
-(async function main() {
-  const question = (query) => new Promise((resolve) => rl.question(query, resolve));
+function mainLoop() {
   let query = "Write action (buy, fill, take, remaining, exit):\n";
-  let action = await question(query);
+  let action = input(query); 
 
   while (action != "exit") {
-    if (action === "buy") await buyCoffee();
-    else if (action === "fill") await fillSupplies();
+    if (action === "buy") buyCoffee();
+    else if (action === "fill") fillSupplies();
     else if (action === "take") takeMoney();
     else if (action === "remaining") displayState();
 
-    action = await question(query);
+    action = input(query); 
   };
-  
-  rl.close();
-})();
+}
+
+mainLoop();

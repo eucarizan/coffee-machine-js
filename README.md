@@ -9,6 +9,7 @@
     - [3: coffee for all](#3-coffee-for-all)
     - [4: buy fill take](#4-buy-fill-take)
     - [5: keep tracking of the supplies](#5-keep-tracking-of-the-supplies)
+    - [6: the sandbox](#6-the-sandbox)
 
 ## learning
 this project allows you to get a taste of javascript. practice working with functions, challenge yourself with loops and conditions, and get more experience with js.
@@ -417,20 +418,22 @@ write action (buy, fill, take, remaining, exit):
 
 </details>
 
-[<<](https://github.com/eucarizan/front-end/blob/main/README.md)
-<!--
-:%s/\(Sample \(Input\|Output\) \d:\)\n\(.*\)/```\r\r**\1**\r```\3/gc
-
-### 0: 
+### 6: the sandbox
 <details>
-<summary></summary>
+<summary>enhance your coffee machine with any new functionality you wish to add</summary>
 
-#### 0.1 description
+#### 6.1 description
+the time goes on, and the competitors are developing their own coffee machines to attract coffee lovers with special types of coffee or interesting features. it's time to enhance your coffee machine to compete with them!
 
-#### 0.2 objectives
+in this stage, you are free to add anything you want to your coffee machine!
 
-#### 0.3 examples
+#### 6.2 objectives
+this stage will not be tested. try to be creative and add something new to your coffee machine. it can be a new type of coffee, different milk flavors, or different volumes of disposable cups.
+
+leave a comment with the link to the full source code of your coffee machine and tell us what you have implemented!
+
+good luck!
 
 </details>
--->
 
+[<<](https://github.com/eucarizan/front-end/blob/main/README.md)
